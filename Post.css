@@ -1,0 +1,201 @@
+.post-content {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.post-content h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.post-content p {
+  color: #555;  /* Darker color for better readability */
+  line-height: 1.7;  /* Increased line height for better readability */
+  font-size: 1.1em;  /* Slightly larger font size */
+  text-align: justify;  /* Justify text for a more uniform appearance */
+  text-justify: inter-word;  /* Improve spacing between words */
+  margin-top: 15px;  /* Add some space between the title and the content */
+  max-width: 90%;  /* Limit the width to maintain a comfortable reading line length */
+  margin-left: auto;  /* Centering the text block */
+  margin-right: auto;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.post:hover {
+  transform: scale(1.05);
+}
+
+.post-detail {
+  font-family: 'Roboto', sans-serif;  /* Using Roboto for a clean look */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  max-width: 800px;  /* Set a maximum width for better readability */
+  margin: 0 auto;  /* Center the detailed post */
+  background-color: #f9f9f9;  /* Light background for contrast */
+  border-radius: 10px;  /* Soft rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+.post-detail-description {
+  color: #555;  /* Subdued color for the content */
+  text-shadow: none;  /* Removing the shadow for a cleaner look */
+  line-height: 1.8;
+  font-size: 1.1em;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 30px;  /* Space between the content and the back button */
+  background-color: transparent;  /* Removing the background color */
+  padding: 0;  /* Removing the padding */
+}
+
+.post-detail h2 {
+  font-family: 'Playfair Display', serif;  /* Elegant font for the title */
+  color: #333;  /* Dark color for the title */
+  font-size: 2em;  /* Larger font size for the title */
+  margin-bottom: 20px;  /* Space between the title and the content */
+}
+.post-detail img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.post-detail p {
+  font-size: 1.2em;
+  text-align: justify;
+  max-width: 80%;
+  line-height: 1.5;
+}
+
+.post-detail button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #03DAC5;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.post-detail button:hover {
+  background-color: #BB86FC;
+}
+
+.post-image {
+  width: 100%;
+  height: 200px; /* Set a fixed height for the image */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.post-detail-image {
+  width: 100%;  /* Make the image take the full width of the post detail container */
+  height: auto;  /* Maintain the aspect ratio */
+  object-fit: cover;  /* Cover the container without distorting the image */
+  border-radius: 10px;  /* Rounded corners for the image */
+  margin-bottom: 20px;  /* Space between the image and the description */
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  width: calc(33.33% - 40px); /* Each post takes up roughly a third of the container width minus margins */
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 2%;
+}
+
+.post-container:hover {
+  transform: scale(1.05); /* Enlarge the post slightly on hover */
+}
+
+.post-container h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Content styling */
+.post-container p {
+  color: #555;
+  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Display only 3 lines of content */
+  -webkit-box-orient: vertical;
+}
+
+/* Blog container styling */
+.blog {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; /* Distribute posts with space around them */
+  padding: 40px 5%; /* Add percentage-based horizontal padding for responsiveness */
+  max-width: 100%; /* Allow the blog container to take up the full width */
+  min-width: 320px;
+  box-sizing: border-box;
+  background-color: #f9f9f9; 
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body, html {
+  background-color: #f9f9f9; /* Ensure the global background matches the blog's background */
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  .post-container {
+    width: calc(50% - 40px); /* On medium screens, each post takes up half the width minus margins */
+  }
+}
+
+@media (max-width: 768px) {
+  .post-container {
+    width: 100%; /* On small screens, each post takes up the full width */
+  }
+}
+
+@media (max-width: 480px) { /* Target very small screens */
+  .blog {
+    padding: 40px 3%; /* Adjust the horizontal padding for very small screens */
+  }
+  .post-container {
+    margin: 20px 1%; /* Adjust the horizontal margin for very small screens */
+  }
+}

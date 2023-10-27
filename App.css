@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1F1F1F; /* Card Background */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.App-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #03DAC5; /* Accent Color 2 */
+  border-bottom: 2px solid #BB86FC; /* Accent Color 1 */
+  padding-bottom: 10px;
+}
